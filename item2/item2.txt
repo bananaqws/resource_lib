@@ -1,0 +1,24 @@
+
+============================================
+rz sz配置
+============================================
+1、安装
+brew install lrzsz
+
+2、放置两个脚本
+权限chmod 777
+chmod 777 /usr/local/bin/iterm2-*
+
+3、配置
+edit profile>>advanced>>triggers
+即：设置Iterm2的Tirgger特性，profiles->default->editProfiles->Advanced中的Tirgger
+
+rz配置：(先rz一下。看输出的一串标识是什么，如果是**B000000，配置如下)
+\*\*B000000    Run Coprocess...     /usr/local/bin/iterm2-recv-zmodem.sh
+
+sz(先rz一下。看输出的一串标识是什么，如果是**B0100，配置如下)
+\*\*B0100 Run Silent Coprocess...   /usr/local/bin/iterm2-send-zmodem.sh
+
+
+
+
